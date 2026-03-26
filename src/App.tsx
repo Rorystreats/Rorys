@@ -104,7 +104,7 @@ export default function App() {
               className="max-w-2xl"
             >
               <h2 className="text-[#6B1111] font-serif italic text-xl md:text-2xl mb-4">Treats that heal your inner child.</h2>
-              <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-8">
+              <h1 className="text-4xl md:text-7xl font-serif font-medium leading-tight mb-8">
                 Thick, gooey, and unapologetically rich.
               </h1>
               <p className="text-lg md:text-xl text-[#2C1818]/80 mb-10 max-w-lg leading-relaxed">
