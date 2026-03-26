@@ -88,6 +88,10 @@ export default function App() {
                   Order Now
                 </a>
               </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -249,8 +253,8 @@ export default function App() {
           )}
         </div>
       </section>
-              
-{/* How to Order Section */}
+
+      {/* How to Order Section */}
       <section id="how-to-order" className="py-24 bg-[#FDFBF7] border-t border-[#6B1111]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
