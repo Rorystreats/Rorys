@@ -249,6 +249,7 @@ export default function App() {
           )}
         </div>
       </section>
+              
 {/* How to Order Section */}
       <section id="how-to-order" className="py-24 bg-[#FDFBF7] border-t border-[#6B1111]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -295,6 +296,7 @@ export default function App() {
           </div>
         </div>
       </section>
+              
       {/* Testimonials */}
       <section className="py-24 bg-[#6B1111] text-[#FDFBF7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
