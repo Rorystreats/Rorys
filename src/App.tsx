@@ -295,7 +295,7 @@ export default function App() {
                  Rory’s is that dream, brought to life. Every dessert here is crafted with care and intention; not just to taste good, but to stay with you. Because to me, it’s never been just about what you’re eating, but how it makes you feel and the memory it leaves behind.
                  Rory’s isn’t just a product, it’s a Story. And every person who experiences it becomes a part of that story.
               </p>
-              <p className="text-[#2C1818]/70 leading-relaxed mb-8">
+              <p className="text-lg text-[#2C1818]/80 leading-relaxed mb-6">
                 Established last year in Pune, Rory's was born out of a desire to bring true, luxurious, NYC-style thick cookies and premium desserts to our city. Every batch is crafted in our cloud kitchen with the finest ingredients and an obsession for the perfect gooey center.
               </p>
               <p className="font-['Meow_Script'] text-5xl text-[#6B1111] mt-4">
