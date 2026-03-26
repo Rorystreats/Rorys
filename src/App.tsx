@@ -288,10 +288,10 @@ export default function App() {
             <div className="order-1 md:order-2">
               <h2 className="text-4xl md:text-5xl font-serif mb-6">Meet Riya.</h2>
               <p className="text-lg text-[#2C1818]/80 leading-relaxed mb-6">
-                 Rory’s was created with a simple intention, to offer desserts that feel indulgent, refined, and truly memorable. 
+                 The founder behind Rory’s, and the indulgence that keeps you keep coming back
              </p>
                 <p className="text-lg text-[#2C1818]/80 leading-relaxed mb-6">
-                 Hi, I’m Riya, the founder behind Rory’s. For as long as I can remember, baking has been something deeply personal to me. It’s always felt soulful, a quiet, grounding process that I’ve returned to time and again since childhood. Over the years, what began as a love for creating desserts slowly shaped into a dream of building something of my own; a space that felt simple, thoughtful, and special in its own way. 
+                 For as long as I can remember, baking has been something deeply personal to me. It’s always felt soulful, a quiet, grounding process that I’ve returned to time and again since childhood. Over the years, what began as a love for creating desserts slowly shaped into a dream of building something of my own; a space that felt simple, thoughtful, and special in its own way. 
                  Rory’s is that dream, brought to life. Every dessert here is crafted with care and intention; not just to taste good, but to stay with you. Because to me, it’s never been just about what you’re eating, but how it makes you feel and the memory it leaves behind.
                  Rory’s isn’t just a product, it’s a Story. And every person who experiences it becomes a part of that story.
               </p>
