@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ShoppingBag, ChevronRight, Star, Heart, Menu, X, MessageCircle, Instagram } from 'lucide-react';
+import { ShoppingBag, ChevronRight, Star, Heart, Menu, X, MessageCircle, Instagram, Clock, Truck, MapPin } from 'lucide-react';
 import { menu, testimonials, WHATSAPP_NUMBER } from './data';
 
 export default function App() {
@@ -42,6 +42,7 @@ export default function App() {
             <div className="hidden md:flex space-x-8 items-center">
               <a href="#craving" className="text-sm uppercase tracking-widest hover:text-[#6B1111] transition-colors">The Craving</a>
               <a href="#menu" className="text-sm uppercase tracking-widest hover:text-[#6B1111] transition-colors">Menu</a>
+              <a href="#how-to-order" className="text-sm uppercase tracking-widest hover:text-[#6B1111] transition-colors">How to Order</a>
               <a href="#story" className="text-sm uppercase tracking-widest hover:text-[#6B1111] transition-colors">Our Story</a>
               <a 
                 href={generateWhatsAppLink()}
@@ -75,6 +76,7 @@ export default function App() {
               <div className="px-4 pt-2 pb-6 space-y-4 flex flex-col">
                 <a href="#craving" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">The Craving</a>
                 <a href="#menu" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Menu</a>
+                <a href="#how-to-order" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">How to Order</a>
                 <a href="#story" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Our Story</a>
                 <a 
                   href={generateWhatsAppLink()}
@@ -86,10 +88,6 @@ export default function App() {
                   Order Now
                 </a>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -251,7 +249,52 @@ export default function App() {
           )}
         </div>
       </section>
+{/* How to Order Section */}
+      <section id="how-to-order" className="py-24 bg-[#FDFBF7] border-t border-[#6B1111]/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-['Meow_Script'] text-5xl md:text-6xl text-[#6B1111] mb-4">How to Order</h2>
+            <p className="text-xl font-serif text-[#2C1818]/80">Everything is baked fresh, just for you.</p>
+          </div>
 
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Rule 1: Timing */}
+            <div className="bg-[#F5EFE6] p-8 rounded-2xl text-center border border-[#6B1111]/10 hover:border-[#6B1111]/30 transition-colors">
+              <Clock className="mx-auto text-[#6B1111] mb-6" size={32} strokeWidth={1.5} />
+              <h3 className="font-serif text-xl mb-3">48-Hour Notice</h3>
+              <p className="text-[#2C1818]/70 text-sm leading-relaxed">
+                Pre-orders are mandatory because we bake everything fresh. Please order two days before your requirement. We cannot accommodate same-day orders.
+              </p>
+            </div>
+
+            {/* Rule 2: Delivery & Pickup */}
+            <div className="bg-[#F5EFE6] p-8 rounded-2xl text-center border border-[#6B1111]/10 hover:border-[#6B1111]/30 transition-colors">
+              <Truck className="mx-auto text-[#6B1111] mb-6" size={32} strokeWidth={1.5} />
+              <h3 className="font-serif text-xl mb-3">Delivery & Pickup</h3>
+              <p className="text-[#2C1818]/70 text-sm leading-relaxed">
+                Delivery is available across Pune and Pimpri-Chinchwad (subject to your address). You can also choose to pick up your order directly from Baner.
+              </p>
+            </div>
+
+            {/* Rule 3: Contact */}
+            <div className="bg-[#F5EFE6] p-8 rounded-2xl text-center border border-[#6B1111]/10 hover:border-[#6B1111]/30 transition-colors">
+              <MessageCircle className="mx-auto text-[#6B1111] mb-6" size={32} strokeWidth={1.5} />
+              <h3 className="font-serif text-xl mb-3">Get in Touch</h3>
+              <p className="text-[#2C1818]/70 text-sm leading-relaxed mb-6">
+                Have a special request or need to check delivery availability? Drop us a message on WhatsApp.
+              </p>
+              <a 
+                href={generateWhatsAppLink("I have a question about ordering")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border border-[#6B1111] text-[#6B1111] px-6 py-2 rounded-full text-xs uppercase tracking-widest hover:bg-[#6B1111] hover:text-[#FDFBF7] transition-colors"
+              >
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Testimonials */}
       <section className="py-24 bg-[#6B1111] text-[#FDFBF7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
