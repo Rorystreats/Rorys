@@ -94,51 +94,22 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-2xl"
-            >
-              <h2 className="text-[#6B1111] font-serif italic text-xl md:text-2xl mb-4">Treats that heal your inner child.</h2>
-              <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-8">
-                Thick, gooey, and unapologetically rich.
-              </h1>
-              <p className="text-lg md:text-xl text-[#2C1818]/80 mb-10 max-w-lg leading-relaxed">
-                Experience Pune's most luxurious NYC-style cookies, decadent cheesecakes, and authentic tiramisu. Baked fresh, just for you.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href={generateWhatsAppLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#6B1111] text-[#FDFBF7] px-8 py-4 rounded-full text-center uppercase tracking-widest hover:bg-[#4A0B0B] transition-colors flex items-center justify-center gap-2"
-                >
-                  <MessageCircle size={20} />
-                  Pre-order for Tomorrow
-                </a>
-                <a 
-                  href="#menu"
-                  className="border border-[#6B1111] text-[#6B1111] px-8 py-4 rounded-full text-center uppercase tracking-widest hover:bg-[#6B1111]/5 transition-colors"
-                >
-                  View Menu
-                </a>
-              </div>
-              <p className="text-xs uppercase tracking-widest text-[#6B1111]/60 mt-6">
-                * Cloud Kitchen in Pune • 48hr Prior Notice Required
-              </p>
-            </motion.div>
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-24 overflow-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center text-center"
+          >
+            <h2 className="text-[#6B1111] font-serif italic text-xl md:text-2xl mb-6">Treats that heal your inner child.</h2>
             
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative aspect-square lg:aspect-[4/5] rounded-t-full overflow-hidden border-8 border-[#F5EFE6] shadow-2xl"
+              className="relative w-full max-w-4xl aspect-video md:aspect-[21/9] rounded-[2rem] overflow-hidden border-8 border-[#F5EFE6] shadow-2xl mb-10"
             >
-              {/* Using a high-quality placeholder that matches the description of a gooey, thick cookie */}
               <img 
                 src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1000&auto=format&fit=crop" 
                 alt="Thick gooey chocolate chip cookie breaking apart" 
@@ -147,7 +118,34 @@ export default function App() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2C1818]/40 to-transparent"></div>
             </motion.div>
-          </div>
+
+            <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-8 max-w-4xl">
+              Thick, gooey, and unapologetically rich.
+            </h1>
+            <p className="text-lg md:text-xl text-[#2C1818]/80 mb-10 max-w-2xl leading-relaxed">
+              Experience Pune's most luxurious NYC-style cookies, decadent cheesecakes, and authentic tiramisu. Baked fresh, just for you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+              <a 
+                href={generateWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#6B1111] text-[#FDFBF7] px-8 py-4 rounded-full text-center uppercase tracking-widest hover:bg-[#4A0B0B] transition-colors flex items-center justify-center gap-2"
+              >
+                <MessageCircle size={20} />
+                Pre-order for Tomorrow
+              </a>
+              <a 
+                href="#menu"
+                className="border border-[#6B1111] text-[#6B1111] px-8 py-4 rounded-full text-center uppercase tracking-widest hover:bg-[#6B1111]/5 transition-colors"
+              >
+                View Menu
+              </a>
+            </div>
+            <p className="text-xs uppercase tracking-widest text-[#6B1111]/60 mt-8">
+              * Cloud Kitchen in Pune • 48hr Prior Notice Required
+            </p>
+          </motion.div>
         </div>
       </section>
 
