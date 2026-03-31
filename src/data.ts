@@ -1,9 +1,9 @@
 export const menu = {
-  cookies: [
+  cookie (Approx 110gm each): [
     { name: "Double Chocolate Chip", price: 190, desc: "Thick, chunky, NYC-style classic." },
     { name: "The Midnight Cocoa Chunk", price: 190, desc: "An overload of three premium chocolates." },
     { name: "Walnut Chocolate Chip", price: 220, desc: "The iconic NYC-style walnut crunch." },
-    { name: "The Hazelnut Molten Core", price: 220, desc: "Gooey Nutella lava center." },
+    { name: "The Hazelnut Molten Core", price: 220, desc: "Gooey Nutella lava centre." },
     { name: "The Golden Macadamia Dream", price: 260, desc: "Caramelized Biscoff with buttery macadamias and rich white chocolate." },
     { name: "Kinder Bueno", price: 260, desc: "Stuffed with creamy Kinder goodness." }
   ],
