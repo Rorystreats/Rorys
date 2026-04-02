@@ -9,24 +9,16 @@ export const menu = {
   ],
   cheesecakes: [
     { name: "Oreo", price: 399, desc: "Classic cookies and cream in a tub." },
-    { name: "Blueberry", price: 399, desc: "Rich cream cheese with wild blueberry compote." },
     { name: "Hazelnut", price: 399, desc: "Decadent roasted hazelnut blend." },
     { name: "Biscoff", price: 399, desc: "The ultimate lotus biscoff experience." }
   ],
   tiramisu: [
-    { name: "Classic", price: 499, desc: "Authentic espresso-soaked ladyfingers." },
-    { name: "Cocoa Misu", price: 499, desc: "Rich cocoa dusted perfection." },
-    { name: "Matcha Misu", price: 599, desc: "Earthy, premium matcha layers." },
+    { name: "Classic Tiramisu", price: 499, desc: "Authentic espresso-soaked ladyfingers." },
     { name: "Biscoff Misu", price: 599, desc: "Caramel & espresso layers in one." }
   ],
-  seasonal: [
-    { name: "Mango Cheesecake", price: 599, desc: "Fresh seasonal mangoes." },
-    { name: "Mango Misu", price: 599, desc: "A tropical twist on the classic." }
-  ],
   tins: [
-    { name: "Scoopable Cookie Tin", price: 1099, desc: "A golden tin of warm, scoopable cookie dough." },
-    { name: "Classic Tiramisu Tin", price: 1199, desc: "Family-sized classic tiramisu." },
-    { name: "Classic Cheesecake Tin", price: 1199, desc: "Rich, creamy cheesecake for sharing." },
+    { name: "Classic Tiramisu Tin", price: 1299, desc: "Family-sized classic tiramisu." },
+    { name: "Classic Cheesecake Tin", price: 1299, desc: "Rich, creamy cheesecake for sharing." },
     { name: "Tiramisu Cheesecake Tin", price: 1499, desc: "The ultimate dessert fusion." }
   ],
   festive: [
