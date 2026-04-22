@@ -216,7 +216,8 @@ export default function App() {
                     {item.image && (
                       <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-xl overflow-hidden border border-[#F5EFE6]">
                         {/* @ts-ignore */}
-                        <img src={item.image} alt={item.name} className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500" />
+                        <img 
+                          src="/goldenchildgonerogue.jpg" alt={item.name} className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500" />
                       </div>
                     )}
                     <div>
