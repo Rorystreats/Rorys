@@ -1,25 +1,25 @@
 export const menu = {
   cookies: [
-    { name: "Double Chocolate Chip", price: 199, desc: "Thick, chunky, NYC-style classic." },
-    { name: "The Midnight Cocoa Chunk", price: 199, desc: "An overload of three premium chocolates." },
-    { name: "Walnut Chocolate Chip", price: 249, desc: "The iconic NYC-style walnut crunch." },
-    { name: "The Hazelnut Molten Core", price: 249, desc: "Gooey Nutella lava center." },
-    { name: "The Golden Macadamia Dream", price: 279, desc: "Caramelized Biscoff with buttery macadamias." },
-    { name: "Kinder Bueno", price: 279, desc: "Stuffed with creamy Kinder goodness." }
+    { name: "Grandma's Illegal Recipe", price: 199, desc: "Classic dough, loaded with rich chunks." },
+    { name: "The Black Sheep", price: 199, desc: "Triple the chocolates, triple the threat." },
+    { name: "Family Legacy", price: 199, desc: "Buttery walnuts with dark chocolate chunks." },
+    { name: "The Godfather", price: 279, desc: "Nutella stuffed center, crunchy hazelnut bites." },
+    { name: "Golden Child Gone Rogue", price: 279, desc: "Caramelized Biscoff with buttery macadamias." },
+    { name: "Soft Boy Era", price: 279, desc: "Stuffed with creamy Kinder goodness." }
   ],
   cheesecakes: [
-    { name: "Oreo", price: 399, desc: "Classic cookies and cream in a tub." },
-    { name: "Hazelnut", price: 399, desc: "Decadent & rich hazelnut overload." },
-    { name: "Biscoff", price: 399, desc: "The ultimate lotus biscoff experience." }
+    { name: "The Favourite Cousin", price: 399, desc: "Classic cookies and cream in a tub." },
+    { name: "The Heir", price: 399, desc: "Decadent & rich hazelnut overload." },
+    { name: "The Rich Aunt", price: 399, desc: "The ultimate lotus biscoff experience." }
   ],
   tiramisu: [
-    { name: "Classic Tiramisu", price: 499, desc: "Authentic espresso-soaked ladyfingers with creamy light mascarpone." },
-    { name: "Biscoff Misu", price: 599, desc: "Caramel & espresso layers in one." }
+    { name: "Classic Affair", price: 499, desc: "Authentic espresso-soaked ladyfingers with creamy light mascarpone." },
+    { name: "After hours", price: 599, desc: "Biscoff caramel & espresso layers in one." }
   ],
   tins: [
     { name: "Classic Tiramisu Tin", price: 1299, desc: "Family-sized classic tiramisu." },
     { name: "Classic Cheesecake Tin", price: 1299, desc: "Date night for two." },
-    { name: "Tiramisu Cheesecake Tin", price: 1499, desc: "The ultimate dessert fusion." }
+    { name: "Tiramisu Cheesecake Tin", price: 1499, desc: "The ultimate festive fusion." }
   ],
   festive: [
     { name: "Cashew Hazelnut Truffle", price: "Custom", desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, topped with milk chocolate, gold flake, and rolled in cashew bits." }
