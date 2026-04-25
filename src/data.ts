@@ -62,7 +62,7 @@ export const menu: Record<string, MenuItem[]> = {
     },
     { 
       slug: "golden-macadamia-dream", 
-      name: "Golden Child Gone Rogue", 
+      name: "Golden Boy Gone Rogue", 
       price: 260, 
       desc: "Caramelized Biscoff with buttery macadamias.", 
       image: "/biscoff.JPG",

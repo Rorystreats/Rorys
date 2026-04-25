@@ -97,19 +97,19 @@ export default function Home() {
                 title: "The Black Sheep", 
                 desc: "An overload of three premium chocolates.",
                 slug: "the-midnight-cocoa-chunk",
-                img: "/triple chip.jpg"
+                img: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800"
               },
               { 
                 title: "The Godfather", 
                 desc: "Gooey Nutella lava center.",
                 slug: "the-hazelnut-molten-core",
-                img: "/nutella.jpg"
+                img: "/hazelnut.jpg"
               },
               { 
-                title: "Golden Child Gone Rogue", 
+                title: "Golden Boy Gone Rogue", 
                 desc: "Caramelized Biscoff with buttery macadamias.",
                 slug: "golden-macadamia-dream",
-                img: "/lotus.JPG"
+                img: "/biscoff.JPG"
               }
             ].map((item, i) => (
               <Link to={`/product/${item.slug}`} key={i} className="bg-[#FDFBF7] p-8 rounded-2xl text-center border border-[#6B1111]/10 hover:border-[#6B1111]/30 hover:scale-[1.02] transition-all group">
