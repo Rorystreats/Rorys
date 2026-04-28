@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Heart, Clock, Truck, MessageCircle, Star } from 'lucide-react';
+import { Heart, Clock, Truck, MessageCircle, Star, Cookie } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { testimonials, WHATSAPP_NUMBER } from '../data';
+import { WHATSAPP_NUMBER } from '../data';
 
 export default function Home() {
   const location = useLocation();
@@ -40,12 +40,12 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full max-w-4xl aspect-video md:aspect-[21/9] rounded-[2rem] overflow-hidden border-8 border-[#F5EFE6] shadow-2xl mb-10"
+              className="relative w-full max-w-4xl aspect-[4/3] sm:aspect-video rounded-[2rem] overflow-hidden border-8 border-[#F5EFE6] shadow-2xl mb-10"
             >
               <img 
-                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1000&auto=format&fit=crop" 
+                src="/cookie2.jpg" 
                 alt="Thick gooey chocolate chip cookie breaking apart" 
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full object-center"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2C1818]/40 to-transparent"></div>
@@ -55,18 +55,15 @@ export default function Home() {
               Thick, gooey, and unapologetically rich.
             </h1>
             <p className="text-lg md:text-xl text-[#2C1818]/80 mb-10 max-w-2xl leading-relaxed">
-              Experience Pune's most luxurious NYC-style cookies, decadent cheesecakes, and authentic tiramisu. Baked fresh, just for you.
+              Experience Pune's most gourmet NYC-style cookies, decadent cheesecakes, and authentic tiramisu. Baked fresh, just for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
-              <a 
-                href={generateWhatsAppLink("Hi! I'm craving some Rory's. I'd love to place an order.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#6B1111] text-[#FDFBF7] px-8 py-4 rounded-full text-center uppercase tracking-widest hover:bg-[#4A0B0B] transition-colors flex items-center justify-center gap-2"
+              <Link 
+                to="/product/the-summer-home"
+                className="bg-[#6B1111] text-[#FDFBF7] px-8 py-4 rounded-full text-center uppercase tracking-widest hover:bg-[#4A0B0B] transition-colors inline-block"
               >
-                <MessageCircle size={20} />
-                Pre-order for Tomorrow
-              </a>
+                Drop of the Month
+              </Link>
               <Link 
                 to="/menu"
                 className="border border-[#6B1111] text-[#6B1111] px-8 py-4 rounded-full text-center uppercase tracking-widest hover:bg-[#6B1111]/5 transition-colors"
@@ -75,7 +72,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="text-xs uppercase tracking-widest text-[#6B1111]/60 mt-8">
-              * Cloud Kitchen in Pune • 48hr Prior Notice Required
+              * Cloud Kitchen in Pune • New Cookie Flavour Every Month
             </p>
           </motion.div>
         </div>
@@ -94,22 +91,22 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { 
-                title: "The Black Sheep", 
-                desc: "An overload of three premium chocolates.",
-                slug: "the-midnight-cocoa-chunk",
-                img: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800"
+                title: "The Summer Home", 
+                desc: "Golden vanilla cookie with fresh mango cream cheese center is irresistible.",
+                slug: "the-summer-home",
+                img: "/pista.jpg"
               },
               { 
-                title: "The Godfather", 
-                desc: "Gooey Nutella lava center.",
-                slug: "the-hazelnut-molten-core",
-                img: "/hazelnut.jpg"
+                title: "The Black Sheep", 
+                desc: "Dark, milk, & white chocolate all together in one. This one's out of control.",
+                slug: "the-midnight-cocoa-chunk",
+                img: "/triple.jpg"
               },
               { 
                 title: "Golden Boy Gone Rogue", 
-                desc: "Caramelized Biscoff with buttery macadamias.",
+                desc: "Everything that shines is Biscoff, cause it's the only shine that matters.",
                 slug: "golden-macadamia-dream",
-                img: "/biscoff.JPG"
+                img: "/biscoff.jpg"
               }
             ].map((item, i) => (
               <Link to={`/product/${item.slug}`} key={i} className="bg-[#FDFBF7] p-8 rounded-2xl text-center border border-[#6B1111]/10 hover:border-[#6B1111]/30 hover:scale-[1.02] transition-all group">
@@ -117,7 +114,13 @@ export default function Home() {
                   <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
                 </div>
                 <h3 className="font-serif text-xl mb-3 group-hover:text-[#6B1111] transition-colors">{item.title}</h3>
+                {item.slug === "the-summer-home" && (
+                  <span className="inline-block text-xs uppercase tracking-widest bg-[#6B1111] text-[#FDFBF7] px-3 py-1 rounded-full font-medium mb-3">
+                    Drop of the Month
+                  </span>
+                )}
                 <p className="text-[#2C1818]/70">{item.desc}</p>
+                <p className="text-xs uppercase tracking-widest text-[#6B1111] mt-3 font-medium">Served as a box of two</p>
               </Link>
             ))}
           </div>
@@ -136,9 +139,9 @@ export default function Home() {
             {/* Rule 1: Timing */}
             <div className="bg-[#F5EFE6] p-8 rounded-2xl text-center border border-[#6B1111]/10 hover:border-[#6B1111]/30 transition-colors">
               <Clock className="mx-auto text-[#6B1111] mb-6" size={32} strokeWidth={1.5} />
-              <h3 className="font-serif text-xl mb-3">48-Hour Notice</h3>
+              <h3 className="font-serif text-xl mb-3">Drop of the Month</h3>
               <p className="text-[#2C1818]/70 text-sm leading-relaxed">
-                Pre-orders are mandatory because we bake everything fresh. Please order two days before your requirement. We cannot accommodate same-day orders.
+                New flavour launched every month. A limited edition available alongside our regular menu. Pre-order of 48 hours in advance is a must because everything is made fresh.
               </p>
             </div>
 
@@ -147,7 +150,7 @@ export default function Home() {
               <Truck className="mx-auto text-[#6B1111] mb-6" size={32} strokeWidth={1.5} />
               <h3 className="font-serif text-xl mb-3">Delivery & Pickup</h3>
               <p className="text-[#2C1818]/70 text-sm leading-relaxed">
-                Delivery is available across Pune and Pimpri-Chinchwad (subject to your address). You can also choose to pick up your order directly from Baner.
+                Available on Saturdays and Sundays for delivery or pickup. We deliver across Pune and PCMC, or pick up your order directly from Baner or Prabhat Road.
               </p>
             </div>
 
@@ -156,7 +159,7 @@ export default function Home() {
               <MessageCircle className="mx-auto text-[#6B1111] mb-6" size={32} strokeWidth={1.5} />
               <h3 className="font-serif text-xl mb-3">Get in Touch</h3>
               <p className="text-[#2C1818]/70 text-sm leading-relaxed mb-6">
-                Have a special request or need to check delivery availability? Drop us a message on WhatsApp.
+                Have a special request or bulk order? Drop us a message on WhatsApp and we'll be happy to help.
               </p>
               <a 
                 href={generateWhatsAppLink("I have a question about ordering")}
@@ -167,27 +170,6 @@ export default function Home() {
                 WhatsApp Us
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-24 bg-[#6B1111] text-[#FDFBF7]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-['Meow_Script'] text-5xl md:text-6xl mb-4">Love from Pune</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-[#4A0B0B] p-8 rounded-2xl">
-                <div className="flex gap-1 mb-6 text-[#D4AF37]">
-                  {[...Array(5)].map((_, j) => <Star key={j} size={16} fill="currentColor" />)}
-                </div>
-                <p className="font-serif text-lg leading-relaxed mb-6 opacity-90">"{t.text}"</p>
-                <p className="uppercase tracking-widest text-sm opacity-70">— {t.name}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -215,7 +197,7 @@ export default function Home() {
                  Rory’s isn’t just a product, it’s a Story. And every person who experiences it becomes a part of that story.
               </p>
               <p className="text-lg text-[#2C1818]/80 leading-relaxed mb-6">
-                Established last year in Pune, Rory's was born out of a desire to bring true, luxurious, NYC-style thick cookies and premium desserts to our city. Every batch is crafted in our cloud kitchen with the finest ingredients and an obsession for the perfect gooey center.
+                Established last year in Pune, Rory's was born out of a desire to bring true, gourmet, NYC-style thick cookies and premium desserts to our city. Every batch is crafted in our cloud kitchen with the finest ingredients and an obsession for the perfect gooey center.
               </p>
               <p className="font-['Meow_Script'] text-5xl text-[#6B1111] mt-4">
                 Riya

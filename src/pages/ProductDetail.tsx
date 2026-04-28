@@ -1,25 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ChevronLeft, Info, Package, Truck, MessageCircle, Cookie } from 'lucide-react';
-import { menu, MenuItem, WHATSAPP_NUMBER } from '../data';
+import { ChevronLeft, Info, Package, Truck, MessageCircle, Cookie, ShoppingBag } from 'lucide-react';
+import { menu, MenuItem } from '../data';
+import { useCart } from '../context/CartContext';
 
 export default function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [slug]);
+  const { addToCart } = useCart();
 
   // Find the product
   let product: MenuItem | null = null;
+  let currentCategory = "";
   for (const category in menu) {
     const found = menu[category].find(item => item.slug === slug);
     if (found) {
       product = found;
+      currentCategory = category;
       break;
     }
   }
+
+  // Compile images: combine primary image with gallery, removing duplicates
+  const allImages = product ? [product.image, ...(product.gallery || [])].filter(Boolean) as string[] : [];
+  const uniqueImages = [...new Set(allImages)];
+
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setActiveImage(null);
+  }, [slug]);
 
   if (!product) {
     return (
@@ -30,13 +41,17 @@ export default function ProductDetail() {
     );
   }
 
-  const generateWhatsAppLink = () => {
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi! I'd love to order the ${product?.name}.`)}`;
-  };
+  const currentImage = activeImage || (uniqueImages.length > 0 ? uniqueImages[0] : null);
 
-  // Compile images: combine primary image with gallery, removing duplicates
-  const allImages = [product.image, ...(product.gallery || [])].filter(Boolean) as string[];
-  const uniqueImages = [...new Set(allImages)];
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart({
+        slug: product.slug,
+        name: product.name,
+        price: product.price
+      });
+    }
+  };
 
   return (
     <div className="pt-24 pb-24 min-h-screen">
@@ -51,20 +66,24 @@ export default function ProductDetail() {
           <div className="space-y-4">
             {/* Main Image */}
             <div className="aspect-square bg-[#F5EFE6] rounded-2xl overflow-hidden border border-[#6B1111]/10">
-               {uniqueImages.length > 0 ? (
-                 <img src={uniqueImages[0]} alt={product.name} className="w-full h-full object-cover" />
+               {currentImage ? (
+                 <img src={currentImage} alt={product.name} className="w-full h-full object-cover" />
                ) : (
                  <div className="w-full h-full flex items-center justify-center text-[#2C1818]/30">No Image Available</div>
                )}
             </div>
             
-            {/* Gallery (Max 3 thumbnails) */}
+            {/* Gallery (Thumbnails) */}
             {uniqueImages.length > 1 && (
-              <div className="grid grid-cols-3 gap-4">
-                {uniqueImages.slice(1, 4).map((imgUrl, i) => (
-                  <div key={i} className="aspect-square bg-[#F5EFE6] rounded-xl overflow-hidden border border-[#6B1111]/10">
+              <div className="grid grid-cols-4 sm:grid-cols-5 gap-3">
+                {uniqueImages.map((imgUrl, i) => (
+                  <button 
+                    key={i} 
+                    onClick={() => setActiveImage(imgUrl)}
+                    className={`aspect-square bg-[#F5EFE6] rounded-xl overflow-hidden border transition-all ${currentImage === imgUrl ? 'border-[#6B1111] opacity-100 ring-2 ring-[#6B1111]/20 ring-offset-1' : 'border-[#6B1111]/10 opacity-70 hover:opacity-100'}`}
+                  >
                     <img src={imgUrl} alt={`${product?.name} detail ${i + 1}`} className="w-full h-full object-cover" />
-                  </div>
+                  </button>
                 ))}
               </div>
             )}
@@ -73,21 +92,31 @@ export default function ProductDetail() {
           {/* Details Section */}
           <div className="flex flex-col">
             <h1 className="text-4xl md:text-5xl font-serif mb-4 text-[#2C1818]">{product.name}</h1>
-            <p className="text-2xl font-medium text-[#6B1111] mb-6">₹{product.price}</p>
+            <div className="flex flex-wrap items-center gap-4 mb-6">
+              <p className="text-2xl font-medium text-[#6B1111]">₹{product.price}</p>
+              {currentCategory === 'cookies' && (
+                <span className="text-xs uppercase tracking-widest bg-[#F5EFE6] px-3 py-1 rounded-full text-[#6B1111] font-medium border border-[#6B1111]/10">
+                  Served as a box of two
+                </span>
+              )}
+              {product.slug === 'the-summer-home' && (
+                <span className="text-xs uppercase tracking-widest bg-[#6B1111] text-[#FDFBF7] px-3 py-1 rounded-full font-medium">
+                  Drop of the Month
+                </span>
+              )}
+            </div>
             
             <p className="text-lg text-[#2C1818]/80 leading-relaxed mb-10">
               {product.desc}
             </p>
 
-            <a 
-              href={generateWhatsAppLink()}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button 
+              onClick={handleAddToCart}
               className="bg-[#6B1111] text-[#FDFBF7] px-8 py-4 rounded-full text-center uppercase tracking-widest hover:bg-[#4A0B0B] transition-colors flex items-center justify-center gap-2 mb-12"
             >
-              <MessageCircle size={20} />
-              Order via WhatsApp
-            </a>
+              <ShoppingBag size={20} />
+              Add to Cart
+            </button>
 
             {/* Accordion / Info Blocks */}
             <div className="space-y-6 border-t border-[#6B1111]/10 pt-8">
@@ -98,7 +127,7 @@ export default function ProductDetail() {
                   <h3 className="font-serif text-xl">How to Order</h3>
                 </div>
                 <p className="text-[#2C1818]/70 text-sm leading-relaxed">
-                  Click the button above to WhatsApp us directly. Please place your order at least 48 hours in advance, as everything is baked entirely fresh to order.
+                  Add to cart and checkout via WhatsApp. All our desserts are baked fresh, so we require a 48-hour notice.
                 </p>
               </div>
 

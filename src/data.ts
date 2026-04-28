@@ -12,111 +12,94 @@ export interface MenuItem {
 
 const cookieCare = "They're perfectly happy chilling on your counter for 5 days or in the fridge for 10, but let's be honest you're just going to microwave it for 10 seconds and devour the gooey goodness right now.";
 
-const standardShipping = "We deliver anywhere in Pune, but since our ovens can't bend the space-time continuum, we need a 48-hour heads-up to bake your order fresh.";
+const standardShipping = "Delivering across Pune & PCMC on weekends. Please pre-order 48 hours in advance. Pickups available from Baner or Prabhat Road.";
 
-const chilledShipping = "We'll deliver this across Pune perfectly chilled, because a warm, melted dessert is a tragedy we simply refuse to participate in (just give us 48 hours to prepare!).";
+const chilledShipping = "Delivered perfectly chilled across Pune & PCMC on weekends. Please pre-order 48 hours in advance. Pickups available from Baner or Prabhat Road.";
 
 export const menu: Record<string, MenuItem[]> = {
   cookies: [
     { 
       slug: "double-chocolate-chip", 
-      name: "Grandma's Illegitimate Recipe", 
-      price: 190, 
-      desc: "Thick, chunky, NYC-style classic.",
+      name: "Grandma's Illegal Recipe", 
+      price: 370, 
+      desc: "Warm golden cookie loaded with rich dark chocolate callets, the one you'd like to keep hidden",
       image: "/double.jpg",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
       shippingInfo: standardShipping,
-      gallery: ["https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800", "https://images.unsplash.com/photo-1590080875510-1ab21be55e1e?w=800", "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800"]
+      gallery: ["/double.jpg", "/double2.jpg", "/double3.jpg"]
     },
     { 
       slug: "the-midnight-cocoa-chunk", 
       name: "The Black Sheep", 
-      price: 190, 
-      desc: "An overload of three premium chocolates.",
+      price: 370, 
+      desc: "Dark, milk, & white chocolate all together in one. This one's out of control.",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
       shippingInfo: standardShipping,
-      gallery: ["https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800", "https://images.unsplash.com/photo-1590080875510-1ab21be55e1e?w=800", "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800"]
+      gallery: ["/triple.jpg", "/triple1.jpg", "/triple2.jpg", "/triple3.jpg"]
     },
     { 
       slug: "walnut-chocolate-chip", 
       name: "Family Legacy", 
-      price: 220, 
-      desc: "The iconic NYC-style walnut crunch.",
+      price: 370, 
+      desc: "Crunchy roasted walnuts with rich and powerful dark chocolate is the only kind of legacy you'd want",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
       shippingInfo: standardShipping,
-      gallery: ["https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800", "https://images.unsplash.com/photo-1590080875510-1ab21be55e1e?w=800", "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800"]
+      gallery: ["/walnut.jpg", "/walnut1.jpg", "/walnut2.jpg", "/walnut3.jpg"]
     },
     { 
       slug: "the-hazelnut-molten-core", 
       name: "The Godfather", 
-      price: 220, 
-      desc: "Gooey Nutella lava center.",
+      price: 420, 
+      desc: "Nutty hazelnuts with soft and molten nutella center is what makes you who you are.",
       image: "/hazelnut.jpg",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
       shippingInfo: standardShipping,
-      gallery: ["/nutella.jpg", "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800", "https://images.unsplash.com/photo-1590080875510-1ab21be55e1e?w=800", "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800"]
+      gallery: ["/hazelnut.jpg", "/hazelnut2.jpg", "/hazelnut3.jpg"]
     },
     { 
       slug: "golden-macadamia-dream", 
       name: "Golden Boy Gone Rogue", 
-      price: 260, 
-      desc: "Caramelized Biscoff with buttery macadamias.", 
-      image: "/biscoff.JPG",
+      price: 420, 
+      desc: "Everything that shines is Biscoff, cause it's the only shine that matters.", 
+      image: "/biscoff.jpg",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
       shippingInfo: standardShipping,
-      gallery: ["https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800", "https://images.unsplash.com/photo-1590080875510-1ab21be55e1e?w=800", "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800"]
+      gallery: ["/biscoff.jpg", "/biscoff2.jpg", "/bisoff3.jpg"]
     },
     { 
-      slug: "kinder-bueno", 
-      name: "Soft Boy Era", 
-      price: 260, 
-      desc: "Stuffed with creamy Kinder goodness.",
-      image: "/kinder.jpg",
+      slug: "the-summer-home", 
+      name: "The Summer Home", 
+      price: 420, 
+      desc: "Golden vanilla cookie with fresh mango cream cheese center is irresistible.",
+      image: "/pista.jpg",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
       shippingInfo: standardShipping,
-      gallery: ["https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800", "https://images.unsplash.com/photo-1590080875510-1ab21be55e1e?w=800", "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800"]
-    }
+      gallery: ["/pista.jpg", "/pista1.jpg", "/pista2.jpg", "/pista3.jpg"]
+
+    },
   ],
   cheesecakes: [
-    { slug: "oreo-cheesecake", name: "The Favorite Cousin", price: 390, desc: "Classic cookies and cream in a tub.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping },
-    { slug: "hazelnut-cheesecake", name: "The Heir", price: 390, desc: "Decadent roasted hazelnut blend.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping },
-    { slug: "biscoff-cheesecake", name: "The Rich Aunt", price: 390, desc: "The ultimate lotus biscoff experience.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping }
+    { slug: "oreo-cheesecake", name: "The Favorite Cousin", price: 399, desc: "The classic combo of cookies, cream & cheese is legendary.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping },
+    { slug: "hazelnut-cheesecake", name: "The Heir", price: 399, desc: "Rich & nutty Nutella blended with cheese is a match made in heaven.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping },
   ],
   tiramisu: [
-    { slug: "classic-tiramisu", name: "Classic Affair", price: 500, desc: "Authentic espresso-soaked ladyfingers.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping },
-    { slug: "biscoff-tiramisu", name: "After Hours", price: 590, desc: "Biscoff layered tiramisu.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping }
-  ],
-  seasonal: [
-    { slug: "mango-cheesecake", name: "Mango Cheesecake", price: 590, desc: "Fresh seasonal mangoes.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping },
-    { slug: "mango-tiramisu", name: "Mango Tiramisu", price: 590, desc: "A tropical twist on the classic.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping }
+    { slug: "classic-tiramisu", name: "Classic Affair", price: 499, desc: "Authentic ladyfingers dipped in rich Davidoff espresso with silky mascarpone dusted off with light cocoa powder is a melt in the mouth.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping },
+    { slug: "biscoff-tiramisu", name: "After Hours", price: 599, desc: "Biscoff layered with espresso between the silky vanilla mascarpone is what you need.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping }
   ],
   tins: [
-    { slug: "scoopable-cookie-tin", name: "Scoopable Cookie Tin", price: 1100, desc: "A golden tin of warm, scoopable cookie dough.", careTitle: "Cookie survival guide", careInstructions: cookieCare, shippingInfo: standardShipping },
-    { slug: "classic-tiramisu-tin", name: "Classic Tiramisu Tin", price: 1100, desc: "Family-sized classic tiramisu.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping },
-    { slug: "classic-cheesecake-tin", name: "Classic Cheesecake Tin", price: 1200, desc: "Rich, creamy cheesecake for sharing.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping },
-    { slug: "tiramisu-cheesecake-tin", name: "Tiramisu Cheesecake Tin", price: 1450, desc: "The ultimate dessert fusion.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping }
+    { slug: "classic-tiramisu-tin", name: "Classic Tiramisu Tin", price: 1399, desc: "Family-sized classic tiramisu.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/tiramisu-tin.jpg" },
+    { slug: "classic-cheesecake-tin", name: "Classic Cheesecake Tin", price: 1199, desc: "Rich, creamy cheesecake for sharing.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/cheesecake-tin.jpg" },
+    { slug: "tiramisu-cheesecake-tin", name: "Tiramisu Cheesecake Tin", price: 1599, desc: "The ultimate dessert fusion.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/tiramisu-cheesecake-tin.jpg" }
   ],
   festive: [
     { slug: "cashew-hazelnut-truffle", name: "Cashew Hazelnut Truffle", price: "Custom", desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, topped with milk chocolate, gold flake, and rolled in cashew bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available for bulk orders across Pune. We promise it's worth the wait!" }
   ]
 };
-
-export const testimonials = [
-  { name: "Aarav M.", text: "The thickest, gooiest cookies I've ever had in Pune. The hazelnut stuffed one is literally a warm hug." },
-  { name: "Priya S.", text: "Ordered the Tiramisu Cheesecake tin for a party and it was the star of the night. Absolutely luxurious." },
-  { name: "Rohan K.", text: "Finally, authentic NYC-style cookies in India! The walnut chocolate chip is perfection." },
-  { name: "Neha T.", text: "The Biscoff cheesecake is one of the best that I have ever had. So creamy and perfectly balanced!" },
-  { name: "Siddharth J.", text: "Got a box of assorted cookies for a get-together. The packaging is gorgeous, and the cookies were gone in minutes!" },
-  { name: "Ananya P.", text: "That Biscoff Macadamia cookie is unreal. The crunch from the nuts and the gooey center... I'm completely obsessed." },
-  { name: "Vikram D.", text: "The Cashew Truffle was one of the best gifts that I gave in Diwali to all of my friends and family, and they absolutely loved it. Cannot wait for you to launch them again for the next festival." },
-  { name: "Sneha R.", text: "Best cookies in Pune, hands down. The Midnight Cocoa Chunk is my weekly treat now." },
-  { name: "Kabir M.", text: "I've tried every bakery in town, but Rory's hits different. So thick, gooey, and perfectly baked every single time." }
-];
 
 export const WHATSAPP_NUMBER = "918208767902"; // Placeholder, user will update
