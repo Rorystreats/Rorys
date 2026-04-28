@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ChevronLeft, Info, Package, Truck, MessageCircle, Cookie, ShoppingBag } from 'lucide-react';
+import { ChevronLeft, Info, Package, Truck, MessageCircle, Cookie, ShoppingBag, ChevronRight } from 'lucide-react';
 import { menu, MenuItem } from '../data';
 import { useCart } from '../context/CartContext';
 
@@ -52,6 +52,25 @@ export default function ProductDetail() {
       });
     }
   };
+
+  // Find recommendations
+  let recs = (menu[currentCategory] || []).filter(item => item.slug !== product?.slug);
+  
+  if (recs.length < 3) {
+    for (const cat in menu) {
+      if (cat !== currentCategory) {
+        const catItems = menu[cat].filter(item => item.slug !== product?.slug);
+        for (const item of catItems) {
+          if (!recs.find(r => r.slug === item.slug)) {
+            recs.push(item);
+          }
+        }
+      }
+      if (recs.length >= 3) break;
+    }
+  }
+  
+  const recommendations = recs.slice(0, 3);
 
   return (
     <div className="pt-24 pb-24 min-h-screen">
@@ -162,6 +181,51 @@ export default function ProductDetail() {
             </div>
           </div>
         </div>
+
+        {/* Recommendations Section */}
+        {recommendations.length > 0 && (
+          <div className="mt-24 border-t border-[#6B1111]/10 pt-16">
+            <h2 className="font-serif text-3xl mb-8 text-[#2C1818] text-center">You might also like</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {recommendations.map(item => (
+                <Link 
+                  to={`/product/${item.slug}`} 
+                  key={item.slug}
+                  className="group block bg-[#FDFBF7] border border-[#6B1111]/10 rounded-2xl p-6 hover:shadow-lg hover:border-[#6B1111]/30 transition-all cursor-pointer relative"
+                >
+                  <div className="flex gap-4">
+                    <div className="w-24 h-24 shrink-0 rounded-xl overflow-hidden bg-[#F5EFE6]">
+                      {item.image ? (
+                        <img src={item.image} alt={item.name} className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500" />
+                      ) : item.gallery && item.gallery.length > 0 ? (
+                        <img src={item.gallery[0]} alt={item.name} className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-xs text-[#2C1818]/30">No Image</div>
+                      )}
+                    </div>
+                    <div className="flex flex-col flex-1 justify-between">
+                      <div>
+                        <h3 className="font-serif text-xl mb-1 group-hover:text-[#6B1111] transition-colors line-clamp-1">{item.name}</h3>
+                        {item.slug === 'the-summer-home' && (
+                          <span className="inline-block text-[10px] uppercase tracking-widest bg-[#6B1111] text-[#FDFBF7] px-2 py-0.5 rounded-full font-medium mb-1">
+                            Drop of the Month
+                          </span>
+                        )}
+                        <p className="text-[#2C1818]/70 text-sm line-clamp-2">{item.desc}</p>
+                      </div>
+                      <div className="flex justify-between items-center mt-4 pt-2 border-t border-[#6B1111]/5">
+                        <span className="font-serif font-medium">₹{item.price}</span>
+                        <span className="text-xs uppercase tracking-widest text-[#6B1111] flex items-center gap-1 group-hover:gap-2 transition-all bg-[#6B1111]/5 px-3 py-1.5 rounded-full">
+                          View <ChevronRight size={14} />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
