@@ -85,8 +85,8 @@ export const menu: Record<string, MenuItem[]> = {
     },
   ],
   cheesecakes: [
-    { slug: "oreo-cheesecake", name: "The Favorite Cousin", price: 399, desc: "The classic combo of cookies, cream & cheese is legendary.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping },
-    { slug: "hazelnut-cheesecake", name: "The Heir", price: 399, desc: "Rich & nutty Nutella blended with cheese is a match made in heaven.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping },
+    { slug: "oreo-cheesecake", name: "The Favorite Cousin", price: 399, desc: "The classic combo of cookies, cream & cheese is legendary.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/oreocheese.jpg" },
+    { slug: "hazelnut-cheesecake", name: "The Heir", price: 399, desc: "Rich & nutty Nutella blended with cheese is a match made in heaven.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/hazelnutcheese.jpg" },
   ],
   tiramisu: [
     { slug: "classic-tiramisu", name: "Classic Affair", price: 499, desc: "Authentic ladyfingers dipped in rich Davidoff espresso with silky mascarpone dusted off with light cocoa powder is a melt in the mouth.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping },
@@ -95,7 +95,7 @@ export const menu: Record<string, MenuItem[]> = {
   tins: [
     { slug: "classic-tiramisu-tin", name: "Classic Tiramisu Tin", price: 1399, desc: "Family-sized classic tiramisu.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/tiramisutin.jpg" },
     { slug: "classic-cheesecake-tin", name: "Classic Cheesecake Tin", price: 1199, desc: "Rich, creamy cheesecake for sharing.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/cheesecaketin.jpg" },
-    { slug: "tiramisu-cheesecake-tin", name: "Tiramisu Cheesecake Tin", price: 1599, desc: "The ultimate dessert fusion.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/tiramisucheesecaketin.jpg" }
+    { slug: "tiramisu-cheesecake-tin", name: "Tiramisu Cheesecake Tin", price: 1599, desc: "The ultimate dessert fusion.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/tctin.jpg" }
   ],
   festive: [
     { slug: "cashew-hazelnut-truffle", name: "Cashew Hazelnut Truffle", price: "Custom", desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, topped with milk chocolate, gold flake, and rolled in cashew bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available for bulk orders across Pune. We promise it's worth the wait!" }
