@@ -59,10 +59,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
               <Link 
-                to="/product/the-summer-home"
+                to="/menu/cookies"
                 className="bg-[#6B1111] text-[#FDFBF7] px-8 py-4 rounded-full text-center uppercase tracking-widest hover:bg-[#4A0B0B] transition-colors inline-block"
               >
-                Drop of the Month
+                Cookies
               </Link>
               <Link 
                 to="/menu"
@@ -91,10 +91,10 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { 
-                title: "The Summer Home", 
+                title: "The Godfather", 
                 desc: "Golden vanilla cookie with fresh mango cream cheese center is irresistible.",
-                slug: "the-summer-home",
-                img: "/pista.jpg"
+                slug: "hazelnut",
+                img: "/hazelnut.jpg"
               },
               { 
                 title: "The Black Sheep", 
