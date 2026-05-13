@@ -71,18 +71,6 @@ export const menu: Record<string, MenuItem[]> = {
       shippingInfo: standardShipping,
       gallery: ["/biscoff.jpg", "/biscoff2.jpg", "/bisoff3.jpg"]
     },
-    { 
-      slug: "the-summer-home", 
-      name: "The Summer Home", 
-      price: 420, 
-      desc: "Golden vanilla cookie with fresh mango cream cheese center is irresistible.",
-      image: "/pista.jpg",
-      careTitle: "Cookie survival guide",
-      careInstructions: cookieCare,
-      shippingInfo: standardShipping,
-      gallery: ["/pista.jpg", "/pista1.jpg", "/pista2.jpg", "/pista3.jpg"]
-
-    },
   ],
   cheesecakes: [
     { slug: "oreo-cheesecake", name: "The Favorite Cousin", price: 399, desc: "The classic combo of cookies, cream & cheese is legendary.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/oreocheese.jpg" },
