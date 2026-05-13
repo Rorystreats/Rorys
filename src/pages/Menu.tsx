@@ -105,11 +105,6 @@ export default function Menu() {
                         <div className="flex flex-col flex-1 justify-between">
                           <div>
                             <h3 className="font-serif text-xl mb-1 group-hover:text-[#6B1111] transition-colors">{item.name}</h3>
-                            {item.slug === 'the-summer-home' && (
-                              <span className="inline-block text-[10px] uppercase tracking-widest bg-[#6B1111] text-[#FDFBF7] px-2 py-0.5 rounded-full font-medium mb-1">
-                                Drop of the Month
-                              </span>
-                            )}
                             <p className="text-[#2C1818]/70 text-sm line-clamp-2">{item.desc}</p>
                             {cat.id === 'cookies' && (
                               <p className="text-xs uppercase tracking-widest text-[#6B1111] mt-2 font-medium">Served as a box of two</p>
