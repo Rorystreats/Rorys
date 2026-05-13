@@ -92,7 +92,7 @@ export default function Home() {
             {[
               { 
                 title: "The Godfather", 
-                desc: "Golden vanilla cookie with fresh mango cream cheese center is irresistible.",
+                desc: "Nutty hazelnuts with soft and molten nutella center is what makes you who you are.",
                 slug: "hazelnut",
                 img: "/hazelnut.jpg"
               },
