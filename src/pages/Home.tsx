@@ -93,7 +93,7 @@ export default function Home() {
               { 
                 title: "The Godfather", 
                 desc: "Nutty hazelnuts with soft and molten nutella center is what makes you who you are.",
-                slug: "hazelnut",
+                slug: "the-hazelnut-molten-core",
                 img: "/hazelnut.jpg"
               },
               { 
