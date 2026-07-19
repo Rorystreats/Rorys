@@ -8,6 +8,7 @@ const categories = [
   { id: 'cookies', label: 'NYC-Style Cookies' },
   { id: 'tiramisu', label: 'Tiramisu' },
   { id: 'tins', label: 'Manhattan Size' },
+  { id: 'festive', label: 'Celebrations' }
 ];
 
 export default function Menu() {
