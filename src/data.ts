@@ -82,7 +82,7 @@ export const menu: Record<string, MenuItem[]> = {
   ],
   celebrations: [
     { slug: "cashew-hazelnut-truffle", name: "Old Money Truffle", price: "Custom", desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, topped with milk chocolate, gold flake, and rolled in cashew bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!", image: "/Kaju2.jpg" },
-    { slug: "pista-white-truffle", name: "New Money Truffle", price: "Custom", desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pistachio cream, topped with milk chocolate, rose petals, and rolled in pista bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!", image: "pista2.jpg" }
+    { slug: "pista-white-truffle", name: "New Money Truffle", price: "Custom", desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pistachio cream, topped with milk chocolate, rose petals, and rolled in pista bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!", image: "/pista2.jpg" }
   ]
 };
 
