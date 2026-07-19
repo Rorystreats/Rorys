@@ -150,7 +150,7 @@ export default function Home() {
               <Truck className="mx-auto text-[#6B1111] mb-6" size={32} strokeWidth={1.5} />
               <h3 className="font-serif text-xl mb-3">Delivery & Pickup</h3>
               <p className="text-[#2C1818]/70 text-sm leading-relaxed">
-                We deliver across Pune and PCMC, or pick up your order directly from Baner.
+                We deliver across Pune and PCMC, or you can pick up your order directly from Baner.
               </p>
             </div>
 
