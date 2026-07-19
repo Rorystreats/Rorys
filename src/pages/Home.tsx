@@ -55,7 +55,7 @@ export default function Home() {
               Thick, gooey, and unapologetically rich.
             </h1>
             <p className="text-lg md:text-xl text-[#2C1818]/80 mb-10 max-w-2xl leading-relaxed">
-              Experience Pune's most gourmet NYC-style cookies, decadent cheesecakes, and authentic tiramisu. Baked fresh, just for you.
+              Experience Pune's most gourmet NYC-style cookies, decadent desserts and authentic tiramisu. Baked fresh, just for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
               <Link 
@@ -150,7 +150,7 @@ export default function Home() {
               <Truck className="mx-auto text-[#6B1111] mb-6" size={32} strokeWidth={1.5} />
               <h3 className="font-serif text-xl mb-3">Delivery & Pickup</h3>
               <p className="text-[#2C1818]/70 text-sm leading-relaxed">
-                Available on Saturdays and Sundays for delivery or pickup. We deliver across Pune and PCMC, or pick up your order directly from Baner or Prabhat Road.
+                We deliver across Pune and PCMC, or pick up your order directly from Baner.
               </p>
             </div>
 
