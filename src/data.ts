@@ -72,10 +72,6 @@ export const menu: Record<string, MenuItem[]> = {
       gallery: ["/biscoff.jpg", "/biscoff2.jpg", "/bisoff3.jpg"]
     },
   ],
-  cheesecakes: [
-    { slug: "oreo-cheesecake", name: "The Favorite Cousin", price: 399, desc: "The classic combo of cookies, cream & cheese is legendary.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/oreocheese.jpg" },
-    { slug: "hazelnut-cheesecake", name: "The Heir", price: 399, desc: "Rich & nutty Nutella blended with cheese is a match made in heaven.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/hazelnutcheese.jpg" }
-  ],
   tiramisu: [
     { slug: "classic-tiramisu", name: "Classic Affair", price: 499, desc: "Authentic ladyfingers dipped in rich Davidoff espresso with silky mascarpone dusted off with light cocoa powder is a melt in the mouth.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping, image: "/classict.jpg" },
     { slug: "biscoff-tiramisu", name: "After Hours", price: 599, desc: "Biscoff layered with espresso between the silky vanilla mascarpone is what you need.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping,image: "/biscofft.jpg" }
@@ -85,7 +81,8 @@ export const menu: Record<string, MenuItem[]> = {
     { slug: "classic-cheesecake-tin", name: "Classic Cheesecake Tin", price: 1199, desc: "Rich, creamy cheesecake for sharing.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/cheesecaketin.jpg" }
   ],
   festive: [
-    { slug: "cashew-hazelnut-truffle", name: "Cashew Hazelnut Truffle", price: "Custom", desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, topped with milk chocolate, gold flake, and rolled in cashew bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available for bulk orders across Pune. We promise it's worth the wait!" }
+    { slug: "cashew-hazelnut-truffle", name: "Old Money Truffle", price: "Custom", desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, topped with milk chocolate, gold flake, and rolled in cashew bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!" },
+    { slug: "pista-white-truffle", name: "New Money Truffle", price: "Custom", desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pistachio cream, topped with milk chocolate, rose petals, and rolled in pista bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!" }
   ]
 };
 
