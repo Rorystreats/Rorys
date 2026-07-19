@@ -81,7 +81,7 @@ export const menu: Record<string, MenuItem[]> = {
     { slug: "classic-cheesecake-tin", name: "Classic Cheesecake Tin", price: 1199, desc: "Rich, creamy cheesecake for sharing.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/cheesecaketin.jpg" }
   ],
   festive: [
-    { slug: "cashew-hazelnut-truffle", name: "Old Money Truffle", price: "Custom", desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, topped with milk chocolate, gold flake, and rolled in cashew bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!", image: "/kaju1.jpg", "/kaju2.jpg" },
+    { slug: "cashew-hazelnut-truffle", name: "Old Money Truffle", price: "Custom", desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, topped with milk chocolate, gold flake, and rolled in cashew bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!", image: "/Kaju.1.jpg", "/Kaju2.jpg" },
     { slug: "pista-white-truffle", name: "New Money Truffle", price: "Custom", desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pistachio cream, topped with milk chocolate, rose petals, and rolled in pista bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!" }
   ]
 };
