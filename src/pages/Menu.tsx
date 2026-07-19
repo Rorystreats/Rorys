@@ -6,7 +6,6 @@ import { menu } from '../data';
 
 const categories = [
   { id: 'cookies', label: 'NYC-Style Cookies' },
-  { id: 'cheesecakes', label: 'Cheesecakes' },
   { id: 'tiramisu', label: 'Tiramisu' },
   { id: 'tins', label: 'Manhattan Size' },
 ];
