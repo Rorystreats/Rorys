@@ -102,7 +102,7 @@ export const menu: Record<string, MenuItem[]> = {
         name: "Old Money", 
         price: 999, 
         desc: "Thick cashew cocoa fudge, center filled with hazelnut milk , rolled in cashew bits, and topped with milk chocolate and a silver flake.",
-        image: "/Kaju2.jpg",
+        image: "/Kajutruffle1.jpg",
         variants: [
           { id: "box-of-6", name: "Box of 6", price: 999 },
           { id: "box-of-9", name: "Box of 9", price: 1299 }
@@ -113,7 +113,7 @@ export const menu: Record<string, MenuItem[]> = {
         name: "New Money", 
         price: 999, 
         desc: "Rich white chocolate fudge, center filled with kunafa pistachio cream, rolled in decadent pistachio bits and topped with milk chocolate and rose petals.",
-        image: "/pistatruffle.jpg",
+        image: "/pistatruffle1.jpg",
         variants: [
           { id: "box-of-6", name: "Box of 6", price: 999 },
           { id: "box-of-9", name: "Box of 9", price: 1299 }
