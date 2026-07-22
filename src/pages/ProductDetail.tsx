@@ -81,7 +81,13 @@ export default function ProductDetail() {
   const recommendations = recs.slice(0, 3);
 
   return (
-    <div className="pt-24 pb-24 min-h-screen">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.4 }}
+      className="pt-24 pb-32 min-h-screen relative"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <Link to="/menu" className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-[#2C1818]/50 hover:text-[#6B1111] transition-colors mb-8">
@@ -249,6 +255,25 @@ export default function ProductDetail() {
           </div>
         )}
       </div>
-    </div>
+    {/* Sticky Mobile Add to Cart */}
+      <div className="fixed bottom-0 left-0 right-0 bg-[#FDFBF7] border-t border-[#6B1111]/10 p-4 sm:hidden z-40 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+        <div className="flex gap-4 items-center justify-between">
+          <div>
+            <p className="font-serif font-medium text-lg text-[#6B1111]">
+              ₹{selectedVariant ? selectedVariant.price : product.price}
+            </p>
+            <p className="text-xs text-[#2C1818]/60 truncate max-w-[120px]">
+              {selectedVariant ? selectedVariant.name : product.name}
+            </p>
+          </div>
+          <button 
+            onClick={handleAddToCart}
+            className="flex-1 bg-[#2C1818] text-[#FDFBF7] py-3 px-4 flex items-center justify-center gap-2 hover:bg-[#6B1111] transition-colors shadow-xl text-sm uppercase tracking-widest font-medium"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </motion.div>
   );
 }
