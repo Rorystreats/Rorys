@@ -113,7 +113,7 @@ export const menu: Record<string, MenuItem[]> = {
         name: "New Money", 
         price: 999, 
         desc: "Rich white chocolate fudge, center filled with kunafa pistachio cream, rolled in decadent pistachio bits and topped with milk chocolate and rose petals.",
-        image: "/pista2.jpg",
+        image: "/pistatruffle.jpg",
         variants: [
           { id: "box-of-6", name: "Box of 6", price: 999 },
           { id: "box-of-9", name: "Box of 9", price: 1299 }
