@@ -1,3 +1,9 @@
+export interface ProductVariant {
+  id: string;
+  name: string;
+  price: number | string;
+}
+
 export interface MenuItem {
   slug: string;
   name: string;
@@ -8,6 +14,7 @@ export interface MenuItem {
   careTitle?: string;
   careInstructions?: string;
   shippingInfo?: string;
+  variants?: ProductVariant[];
 }
 
 const cookieCare = "They're perfectly happy chilling on your counter for 5 days or in the fridge for 10, but let's be honest you're just going to microwave it for 10 seconds and devour the gooey goodness right now.";
@@ -81,8 +88,26 @@ export const menu: Record<string, MenuItem[]> = {
     { slug: "classic-cheesecake-tin", name: "Classic Cheesecake Tin", price: 1199, desc: "Rich, creamy cheesecake for sharing.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/cheesecaketin.jpg" }
   ],
   celebrations: [
-    { slug: "cashew-hazelnut-truffle", name: "Old Money Truffle", price: "Custom", desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, topped with milk chocolate, silver flake, and rolled in cashew bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!", image: "/Kaju2.jpg" },
-    { slug: "pista-white-truffle", name: "New Money Truffle", price: "Custom", desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pistachio cream, topped with milk chocolate, rose petals, and rolled in pista bits.", careInstructions: "Store in a cool, dry place.", shippingInfo: "Available during festival orders across Pune. We promise it's worth the wait!", image: "/pista2.jpg" }
+    { 
+      slug: "cashew-hazelnut-truffle", 
+      name: "Old Money Truffle", 
+      price: 999, 
+      desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, coated in chocolate and roasted nuts.",
+      variants: [
+        { id: "box-of-6", name: "Box of 6", price: 999 },
+        { id: "box-of-9", name: "Box of 9", price: 1299 }
+      ]
+    },
+    { 
+      slug: "pista-white-truffle", 
+      name: "New Money Truffle", 
+      price: 999, 
+      desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pista cream, coated in white chocolate and pistachios.",
+      variants: [
+        { id: "box-of-6", name: "Box of 6", price: 999 },
+        { id: "box-of-9", name: "Box of 9", price: 1299 }
+      ]
+    }
   ]
 };
 
