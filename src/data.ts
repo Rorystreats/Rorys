@@ -108,4 +108,6 @@ export const menu: Record<string, MenuItem[]> = {
           { id: "box-of-9", name: "Box of 9", price: 1299 }
         ]
       }
+    ]
+}
 export const WHATSAPP_NUMBER = "918208767902"; // Placeholder, user will update
