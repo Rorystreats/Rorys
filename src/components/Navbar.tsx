@@ -37,9 +37,9 @@ export default function Navbar() {
                     className="absolute top-12 left-0 w-48 bg-[#FDFBF7] shadow-xl border border-[#6B1111]/10 rounded-xl overflow-hidden py-2 z-50 flex flex-col"
                   >
                     <Link to="/menu/cookies" onClick={() => setIsDropdownOpen(false)} className="px-6 py-3 text-sm uppercase tracking-widest hover:bg-[#F5EFE6] hover:text-[#6B1111] transition-colors">Cookies</Link>
-                    <Link to="/menu/celebrations" onClick={() => setIsDropdownOpen(false)} className="px-6 py-3 text-sm uppercase tracking-widest hover:bg-[#F5EFE6] hover:text-[#6B1111] transition-colors">Celebrations</Link>
                     <Link to="/menu/tiramisu" onClick={() => setIsDropdownOpen(false)} className="px-6 py-3 text-sm uppercase tracking-widest hover:bg-[#F5EFE6] hover:text-[#6B1111] transition-colors">Tiramisu</Link>
                     <Link to="/menu/tins" onClick={() => setIsDropdownOpen(false)} className="px-6 py-3 text-sm uppercase tracking-widest hover:bg-[#F5EFE6] hover:text-[#6B1111] transition-colors">Tins</Link>
+                    <Link to="/menu/celebrations" onClick={() => setIsDropdownOpen(false)} className="px-6 py-3 text-sm uppercase tracking-widest hover:bg-[#F5EFE6] hover:text-[#6B1111] transition-colors">Celebrations</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
