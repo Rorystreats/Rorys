@@ -26,11 +26,17 @@ export default function ProductDetail() {
   const uniqueImages = [...new Set(allImages)];
 
   const [activeImage, setActiveImage] = useState<string | null>(null);
+  const [selectedVariant, setSelectedVariant] = useState(product?.variants?.[0] || null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setActiveImage(null);
-  }, [slug]);
+    if (product?.variants) {
+      setSelectedVariant(product.variants[0]);
+    } else {
+      setSelectedVariant(null);
+    }
+  }, [slug, product]);
 
   if (!product) {
     return (
@@ -43,12 +49,14 @@ export default function ProductDetail() {
 
   const currentImage = activeImage || (uniqueImages.length > 0 ? uniqueImages[0] : null);
 
-  const handleAddToCart = () => {
+ const handleAddToCart = () => {
     if (product) {
       addToCart({
         slug: product.slug,
         name: product.name,
-        price: product.price
+        price: selectedVariant ? selectedVariant.price : product.price,
+        variantId: selectedVariant?.id,
+        variantName: selectedVariant?.name
       });
     }
   };
@@ -110,24 +118,41 @@ export default function ProductDetail() {
 
           {/* Details Section */}
           <div className="flex flex-col">
-            <h1 className="text-4xl md:text-5xl font-serif mb-4 text-[#2C1818]">{product.name}</h1>
-            <div className="flex flex-wrap items-center gap-4 mb-6">
-              <p className="text-2xl font-medium text-[#6B1111]">₹{product.price}</p>
-              {currentCategory === 'cookies' && (
+          <div className="flex flex-wrap items-center gap-4 mb-6">
+              <p className="text-2xl font-medium text-[#6B1111]">
+                ₹{selectedVariant ? selectedVariant.price : product.price}
+              </p>
+              {currentCategory === 'cookies' && !product.variants && (
                 <span className="text-xs uppercase tracking-widest bg-[#F5EFE6] px-3 py-1 rounded-full text-[#6B1111] font-medium border border-[#6B1111]/10">
                   Served as a box of two
                 </span>
               )}
-              {product.slug === 'the-summer-home' && (
-                <span className="text-xs uppercase tracking-widest bg-[#6B1111] text-[#FDFBF7] px-3 py-1 rounded-full font-medium">
-                  Drop of the Month
-                </span>
-              )}
             </div>
             
-            <p className="text-lg text-[#2C1818]/80 leading-relaxed mb-10">
+            <p className="text-lg text-[#2C1818]/80 leading-relaxed mb-8">
               {product.desc}
             </p>
+
+            {product.variants && (
+              <div className="mb-8">
+                <h3 className="text-sm uppercase tracking-widest text-[#2C1818]/60 font-medium mb-3">Select Box Size</h3>
+                <div className="flex flex-wrap gap-3">
+                  {product.variants.map(variant => (
+                    <button
+                      key={variant.id}
+                      onClick={() => setSelectedVariant(variant)}
+                      className={`px-5 py-2.5 rounded-full border text-sm font-medium transition-colors ${
+                        selectedVariant?.id === variant.id
+                          ? 'border-[#6B1111] bg-[#6B1111] text-[#FDFBF7]'
+                          : 'border-[#6B1111]/20 text-[#2C1818] hover:border-[#6B1111]'
+                      }`}
+                    >
+                      {variant.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <button 
               onClick={handleAddToCart}
