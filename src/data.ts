@@ -99,9 +99,9 @@ export const menu: Record<string, MenuItem[]> = {
   celebrations: [
       { 
         slug: "cashew-hazelnut-truffle", 
-        name: "Old Money Truffle", 
+        name: "Old Money", 
         price: 999, 
-        desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, dipped in rich dark chocolate, and coated with toasted hazelnuts.",
+        desc: "Thick cashew cocoa fudge, center filled with hazelnut milk , rolled in cashew bits, and topped with milk chocolate and a silver flake.",
         image: "/Kaju2.jpg",
         variants: [
           { id: "box-of-6", name: "Box of 6", price: 999 },
@@ -110,9 +110,9 @@ export const menu: Record<string, MenuItem[]> = {
       },
       { 
         slug: "pista-white-truffle", 
-        name: "New Money Truffle", 
+        name: "New Money", 
         price: 999, 
-        desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pista cream, dipped in white chocolate, and topped with kunafa crunch.",
+        desc: "Rich white chocolate fudge, center filled with kunafa pistachio cream, rolled in decadent pistachio bits and topped with milk chocolate and rose petals.",
         image: "/pista2.jpg",
         variants: [
           { id: "box-of-6", name: "Box of 6", price: 999 },
