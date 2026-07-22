@@ -88,27 +88,26 @@ export const menu: Record<string, MenuItem[]> = {
     { slug: "classic-cheesecake-tin", name: "Classic Cheesecake Tin", price: 1199, desc: "Rich, creamy cheesecake for sharing.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/cheesecaketin.jpg" }
   ],
   celebrations: [
-    { 
-      slug: "cashew-hazelnut-truffle", 
-      name: "Old Money Truffle", 
-      price: 999, 
-      desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, coated in chocolate and roasted nuts.",
-      variants: [
-        { id: "box-of-6", name: "Box of 6", price: 999 },
-        { id: "box-of-9", name: "Box of 9", price: 1299 }
-      ]
-    },
-    { 
-      slug: "pista-white-truffle", 
-      name: "New Money Truffle", 
-      price: 999, 
-      desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pista cream, coated in white chocolate and pistachios.",
-      variants: [
-        { id: "box-of-6", name: "Box of 6", price: 999 },
-        { id: "box-of-9", name: "Box of 9", price: 1299 }
-      ]
-    }
-  ]
-};
+      { 
+        slug: "cashew-hazelnut-truffle", 
+        name: "Old Money Truffle", 
+        price: 999, 
+        desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, dipped in rich dark chocolate, and coated with toasted hazelnuts.",
+        variants: [
+          { id: "box-of-6", name: "Box of 6", price: 999 },
+          { id: "box-of-9", name: "Box of 9", price: 1299 }
+        ]
+      },
+      { 
+        slug: "pista-white-truffle", 
+        name: "New Money Truffle", 
+        price: 999, 
+        desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pista cream, dipped in white chocolate, and topped with kunafa crunch.",
+        variants: [
+          { id: "box-of-6", name: "Box of 6", price: 999 },
+          { id: "box-of-9", name: "Box of 9", price: 1299 }
+        ]
+      }
+    ]
 
 export const WHATSAPP_NUMBER = "918208767902"; // Placeholder, user will update
