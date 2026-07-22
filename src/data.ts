@@ -102,7 +102,7 @@ export const menu: Record<string, MenuItem[]> = {
         name: "Old Money", 
         price: 999, 
         desc: "Thick cashew cocoa fudge, center filled with hazelnut milk , rolled in cashew bits, and topped with milk chocolate and a silver flake.",
-        image: "/kajutruffle1.JPG",
+        image: "/kaju1.JPG",
         variants: [
           { id: "box-of-6", name: "Box of 6", price: 999 },
           { id: "box-of-9", name: "Box of 9", price: 1299 }
