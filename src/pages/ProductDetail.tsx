@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'motion/react';
+import { useParams, Link, useNavigate } from 'react-router-dom';import { motion } from 'motion/react';
 import { ChevronLeft, Info, Package, Truck, MessageCircle, Cookie, ShoppingBag, ChevronRight } from 'lucide-react';
 import { menu, MenuItem } from '../data';
 import { useCart } from '../context/CartContext';
 
 export default function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const { addToCart } = useCart();
 
   // Find the product
@@ -90,9 +90,9 @@ export default function ProductDetail() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <Link to="/menu" className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-[#2C1818]/50 hover:text-[#6B1111] transition-colors mb-8">
-          <ChevronLeft size={16} /> Back to Menu
-        </Link>
+        <button onClick={() => navigate(-1)} className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-[#2C1818]/50 hover:text-[#6B1111] transition-colors mb-8 cursor-pointer">
+             <ChevronLeft size={16} /> Back
+        </button>
         
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Images Section */}
