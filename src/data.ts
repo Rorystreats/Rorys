@@ -83,7 +83,9 @@ export const menu: Record<string, MenuItem[]> = {
       name: "One for all Box",
       price: 990,
       desc: "Includes all 5 flavours of our NYC style cookies.",
+      image: "/double.jpg",
       careTitle: "Cookie survival guide",
+      gallery: ["/double.jpg", "/triple.jpg", "/walnut.jpg", "/hazelnut.jpg", "/biscoff.jpg"]
     },
   ],
   tiramisu: [
