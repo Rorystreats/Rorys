@@ -93,6 +93,7 @@ export const menu: Record<string, MenuItem[]> = {
         name: "Old Money Truffle", 
         price: 999, 
         desc: "Thick cashew cocoa fudge, stuffed with hazelnut cream, dipped in rich dark chocolate, and coated with toasted hazelnuts.",
+        image: "/Kaju2.jpg",
         variants: [
           { id: "box-of-6", name: "Box of 6", price: 999 },
           { id: "box-of-9", name: "Box of 9", price: 1299 }
@@ -103,6 +104,7 @@ export const menu: Record<string, MenuItem[]> = {
         name: "New Money Truffle", 
         price: 999, 
         desc: "Rich pistachio white cocoa fudge, stuffed with kunafa pista cream, dipped in white chocolate, and topped with kunafa crunch.",
+        image: "/pista2.jpg",
         variants: [
           { id: "box-of-6", name: "Box of 6", price: 999 },
           { id: "box-of-9", name: "Box of 9", price: 1299 }
