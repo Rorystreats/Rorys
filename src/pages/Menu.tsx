@@ -106,7 +106,7 @@ export default function Menu() {
                           <div>
                             <h3 className="font-serif text-xl mb-1 group-hover:text-[#6B1111] transition-colors">{item.name}</h3>
                             <p className="text-[#2C1818]/70 text-sm line-clamp-2">{item.desc}</p>
-                            {cat.id === 'cookies' && (
+                            {cat.id === 'cookies' && !item.variants && item.slug !== 'assorted-cookie-box' && (
                               <p className="text-xs uppercase tracking-widest text-[#6B1111] mt-2 font-medium">Served as a box of two</p>
                             )}
                           </div>
