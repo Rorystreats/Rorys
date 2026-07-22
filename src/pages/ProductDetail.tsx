@@ -171,7 +171,9 @@ export default function ProductDetail() {
                   <h3 className="font-serif text-xl">How to Order</h3>
                 </div>
                 <p className="text-[#2C1818]/70 text-sm leading-relaxed">
-                  Add to cart and checkout via WhatsApp. All our desserts are baked fresh, so we require a 48-hour notice.
+                  {currentCategory === 'celebrations'
+                    ? "Exclusively for Rakshabandhan. Pre-orders are open till 18th Aug with limited boxes of each available."
+                    : "Add to cart and checkout via WhatsApp. All our desserts are baked fresh, so we require a 48-hour notice."}
                 </p>
               </div>
 
