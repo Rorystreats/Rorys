@@ -78,6 +78,13 @@ export const menu: Record<string, MenuItem[]> = {
       shippingInfo: standardShipping,
       gallery: ["/biscoff.jpg", "/biscoff2.jpg", "/bisoff3.jpg"]
     },
+    {
+      slug: "assorted-cookie-box",
+      name: "One for all Box",
+      price: 990,
+      desc: "Includes all 5 flavours of our NYC style cookies.",
+      careTitle: "Cookie survival guide",
+    },
   ],
   tiramisu: [
     { slug: "classic-tiramisu", name: "Classic Affair", price: 499, desc: "Authentic ladyfingers dipped in rich Davidoff espresso with silky mascarpone dusted off with light cocoa powder is a melt in the mouth.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping, image: "/classict.jpg" },
