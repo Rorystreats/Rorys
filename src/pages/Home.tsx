@@ -25,6 +25,23 @@ export default function Home() {
 
   return (
     <div className="pt-20">
+      return (
+    <div className="pt-20">
+      {/* Announcement Banner */}
+      <div className="bg-[#6B1111] text-[#FDFBF7] py-2.5 overflow-hidden flex whitespace-nowrap">
+        <motion.div 
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ ease: "linear", duration: 20, repeat: Infinity }}
+          className="flex gap-8 pr-8 min-w-max"
+        >
+          {[...Array(10)].map((_, i) => (
+            <span key={i} className="text-sm font-medium tracking-wider uppercase flex items-center gap-8">
+              Rakshabandhan Pre-orders are now open till 18th Aug! Limited boxes available <Star size={12} className="text-[#FDFBF7]/50" />
+            </span>
+          ))}
+        </motion.div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative pt-12 pb-20 lg:pt-20 lg:pb-24 overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
