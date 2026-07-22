@@ -24,7 +24,13 @@ export default function Home() {
   };
 
   return (
-    <div className="pt-20">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.4 }}
+      className="pt-20"
+    >
       {/* Announcement Banner */}
       <Link to="/menu/celebrations" className="bg-[#6B1111] text-[#FDFBF7] py-2.5 overflow-hidden flex whitespace-nowrap block hover:bg-[#5a0f0f] transition-colors cursor-pointer">
         <motion.div 
@@ -221,6 +227,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }
