@@ -24,7 +24,13 @@ export default function Menu() {
     : categories;
 
   return (
-    <div className="pt-24 pb-24 min-h-screen">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.4 }}
+      className="pt-24 pb-24 min-h-screen relative"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h1 className="text-5xl md:text-6xl font-serif mb-4">
