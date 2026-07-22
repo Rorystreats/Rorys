@@ -25,8 +25,6 @@ export default function Home() {
 
   return (
     <div className="pt-20">
-      return (
-    <div className="pt-20">
       {/* Announcement Banner */}
       <div className="bg-[#6B1111] text-[#FDFBF7] py-2.5 overflow-hidden flex whitespace-nowrap">
         <motion.div 
