@@ -94,9 +94,10 @@ export default function Navbar() {
                 <p className="text-sm uppercase tracking-widest text-[#6B1111]/60 mb-2 font-bold px-2">Menu</p>
                 <div className="flex flex-col space-y-1 border-l-2 border-[#6B1111]/20 ml-2 pl-4">
                   <Link to="/menu/cookies" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Cookies</Link>
-                  <Link to="/menu/cheesecakes" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Cheesecakes</Link>
                   <Link to="/menu/tiramisu" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Tiramisu</Link>
                   <Link to="/menu/tins" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Tins</Link>
+                  <Link to="/menu/celebration" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Celebrations</Link>
+
                 </div>
               </div>
               <Link to="/#story" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2 px-2 mt-2">Our Story</Link>
