@@ -96,7 +96,7 @@ export default function Navbar() {
                   <Link to="/menu/cookies" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Cookies</Link>
                   <Link to="/menu/tiramisu" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Tiramisu</Link>
                   <Link to="/menu/tins" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Tins</Link>
-                  <Link to="/menu/celebration" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Celebration</Link>
+                  <Link to="/menu/celebrations" onClick={() => setIsMenuOpen(false)} className="text-lg uppercase tracking-widest py-2">Celebrations</Link>
 
                 </div>
               </div>
