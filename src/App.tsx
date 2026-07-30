@@ -19,15 +19,12 @@ import WhatsAppWidget from './components/WhatsAppWidget';
 function AnimatedRoutes() {
   const location = useLocation();
   return (
-    <AnimatePresence mode="wait">
-      {/* @ts-expect-error - React router types don't officially support key here but React does */}
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/menu/:categoryId" element={<Menu />} />
-        <Route path="/product/:slug" element={<ProductDetail />} />
-      </Routes>
-    </AnimatePresence>
+    <Routes location={location} key={location.pathname}>
+      <Route path="/" element={<Home />} />
+      <Route path="/menu" element={<Menu />} />
+      <Route path="/menu/:categoryId" element={<Menu />} />
+      <Route path="/product/:slug" element={<ProductDetail />} />
+    </Routes>
   );
 }
 
