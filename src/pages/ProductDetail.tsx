@@ -12,7 +12,7 @@ export default function ProductDetail() {
   // Find the product
   let product: MenuItem | null = null;
   let currentCategory = "";
-  for (const category in menu) {
+  for (const category of Object.keys(menu)) {
     const found = menu[category].find(item => item.slug === slug);
     if (found) {
       product = found;
