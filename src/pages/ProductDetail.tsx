@@ -31,8 +31,9 @@ export default function ProductDetail() {
   useEffect(() => {
     window.scrollTo(0, 0);
     setActiveImage(null);
-    if (product?.variants) {
-      const [selectedVariant, setSelectedVariant] = useState(product?.variants && product.variants.length > 0 ? product.variants[0] : null);
+      if (product?.variants && product.variants.length > 0) {
+  setSelectedVariant(product.variants[0]);
+} else {
     }
   }, [slug, product]);
 
