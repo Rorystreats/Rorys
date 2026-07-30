@@ -127,8 +127,7 @@ export default function ProductDetail() {
               <p className="text-2xl font-medium text-[#6B1111]">
                 ₹{selectedVariant ? selectedVariant.price : product.price}
               </p>
-              {currentCategory === 'cookies' && !product.variants && product.slug !== 'assorted-cookie-box' && (
-                <span className="text-xs uppercase tracking-widest bg-[#F5EFE6] px-3 py-1 rounded-full text-[#6B1111] font-medium border border-[#6B1111]/10">
+                   {currentCategory === 'cookies' && (!product.variants || product.variants.length === 0) && product.slug !== 'assorted-cookie-box' && (                <span className="text-xs uppercase tracking-widest bg-[#F5EFE6] px-3 py-1 rounded-full text-[#6B1111] font-medium border border-[#6B1111]/10">
                   Served as a box of two
                 </span>
               )}
