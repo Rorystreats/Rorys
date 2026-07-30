@@ -32,9 +32,7 @@ export default function ProductDetail() {
     window.scrollTo(0, 0);
     setActiveImage(null);
     if (product?.variants) {
-      setSelectedVariant(product.variants[0]);
-    } else {
-      setSelectedVariant(null);
+      const [selectedVariant, setSelectedVariant] = useState(product?.variants && product.variants.length > 0 ? product.variants[0] : null);
     }
   }, [slug, product]);
 
