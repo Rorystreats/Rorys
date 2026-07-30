@@ -64,7 +64,7 @@ export default function ProductDetail() {
   let recs = (menu[currentCategory] || []).filter(item => item.slug !== product?.slug);
   
   if (recs.length < 3) {
-    for (const cat in menu) {
+    for (const cat of Object.keys(menu)) {
       if (cat !== currentCategory) {
         const catItems = menu[cat].filter(item => item.slug !== product?.slug);
         for (const item of catItems) {
