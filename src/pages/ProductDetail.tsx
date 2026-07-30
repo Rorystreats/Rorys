@@ -141,9 +141,9 @@ export default function ProductDetail() {
               <div className="mb-8">
                 <h3 className="text-sm uppercase tracking-widest text-[#2C1818]/60 font-medium mb-3">Select Box Size</h3>
                 <div className="flex flex-wrap gap-3">
-                  {product.variants.map(variant => (
-                    <button
-                      key={variant.id}
+  {product.variants.map(variant => (
+    <button
+      key={variant.id}
                       onClick={() => setSelectedVariant(variant)}
                       className={`px-5 py-2.5 rounded-full border text-sm font-medium transition-colors ${
                         selectedVariant?.id === variant.id
