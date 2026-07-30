@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { motion } from 'motion/react';
 import { ChevronLeft, Info, Package, Truck, MessageCircle, Cookie, ShoppingBag, ChevronRight } from 'lucide-react';
 import { menu, MenuItem } from '../data';
 import { useCart } from '../context/CartContext';
@@ -26,14 +27,16 @@ export default function ProductDetail() {
   const uniqueImages = [...new Set(allImages)];
 
   const [activeImage, setActiveImage] = useState<string | null>(null);
-  const [selectedVariant, setSelectedVariant] = useState(product?.variants?.[0] || null);
+
+  const [selectedVariant, setSelectedVariant] = useState(product?.variants && product.variants.length > 0 ? product.variants[0] : null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setActiveImage(null);
-      if (product?.variants && product.variants.length > 0) {
-  setSelectedVariant(product.variants[0]);
-} else {
+    if (product?.variants && product.variants.length > 0) {
+      setSelectedVariant(product.variants[0]);
+    } else {
+      setSelectedVariant(null);
     }
   }, [slug, product]);
 
@@ -48,7 +51,7 @@ export default function ProductDetail() {
 
   const currentImage = activeImage || (uniqueImages.length > 0 ? uniqueImages[0] : null);
 
- const handleAddToCart = () => {
+  const handleAddToCart = () => {
     if (product) {
       addToCart({
         slug: product.slug,
@@ -90,7 +93,7 @@ export default function ProductDetail() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <button onClick={() => navigate(-1)} className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-[#2C1818]/50 hover:text-[#6B1111] transition-colors mb-8 cursor-pointer">
-             <ChevronLeft size={16} /> Back
+          <ChevronLeft size={16} /> Back
         </button>
         
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
@@ -123,11 +126,13 @@ export default function ProductDetail() {
 
           {/* Details Section */}
           <div className="flex flex-col">
-          <div className="flex flex-wrap items-center gap-4 mb-6">
+            <h1 className="text-4xl md:text-5xl font-serif mb-4 text-[#2C1818]">{product.name}</h1>
+            <div className="flex flex-wrap items-center gap-4 mb-6">
               <p className="text-2xl font-medium text-[#6B1111]">
                 ₹{selectedVariant ? selectedVariant.price : product.price}
               </p>
-                   {currentCategory === 'cookies' && (!product.variants || product.variants.length === 0) && product.slug !== 'assorted-cookie-box' && (                <span className="text-xs uppercase tracking-widest bg-[#F5EFE6] px-3 py-1 rounded-full text-[#6B1111] font-medium border border-[#6B1111]/10">
+              {currentCategory === 'cookies' && (!product.variants || product.variants.length === 0) && product.slug !== 'assorted-cookie-box' && (
+                <span className="text-xs uppercase tracking-widest bg-[#F5EFE6] px-3 py-1 rounded-full text-[#6B1111] font-medium border border-[#6B1111]/10">
                   Served as a box of two
                 </span>
               )}
@@ -141,9 +146,9 @@ export default function ProductDetail() {
               <div className="mb-8">
                 <h3 className="text-sm uppercase tracking-widest text-[#2C1818]/60 font-medium mb-3">Select Box Size</h3>
                 <div className="flex flex-wrap gap-3">
-  {product.variants.map(variant => (
-    <button
-      key={variant.id}
+                  {product.variants.map(variant => (
+                    <button
+                      key={variant.id}
                       onClick={() => setSelectedVariant(variant)}
                       className={`px-5 py-2.5 rounded-full border text-sm font-medium transition-colors ${
                         selectedVariant?.id === variant.id
@@ -253,7 +258,8 @@ export default function ProductDetail() {
           </div>
         )}
       </div>
-    {/* Sticky Mobile Add to Cart */}
+
+      {/* Sticky Mobile Add to Cart */}
       <div className="fixed bottom-0 left-0 right-0 bg-[#FDFBF7] border-t border-[#6B1111]/10 p-4 sm:hidden z-40 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
         <div className="flex gap-4 items-center justify-between">
           <div>
