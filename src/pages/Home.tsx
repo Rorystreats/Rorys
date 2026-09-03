@@ -32,7 +32,7 @@ export default function Home() {
       className="pt-20"
     >
       {/* Announcement Banner */}
-      <Link to="/menu" className="bg-[#6B1111] text-[#FDFBF7] py-2.5 overflow-hidden flex whitespace-nowrap block hover:bg-[#5a0f0f] transition-colors cursor-pointer">
+        <Link to="/product/trust-fund-behavior" className="bg-[#6B1111]...
         <motion.div 
           animate={{ x: ["0%", "-50%"] }}
           transition={{ ease: "linear", duration: 80, repeat: Infinity }}
