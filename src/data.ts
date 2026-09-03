@@ -79,13 +79,13 @@ export const menu: Record<string, MenuItem[]> = {
       gallery: ["/biscoff.jpg", "/biscoff2.jpg", "/bisoff3.jpg"]
     },
     {
-      slug: "assorted-cookie-box",
-      name: "One for all Box",
-      price: 990,
-      desc: "Includes all 5 flavours of our NYC style cookies.",
-      image: "/double.jpg",
+      slug: "trust-fund-behavior",
+      name: "Trust Fund Behavior",
+      price: 420,
+      desc: "Rich cocoa dough with toasted pistachios and a milk chocolate centre filled with Kunafa pistachio paste.",
       careTitle: "Cookie survival guide",
-      gallery: ["/double.jpg", "/triple.jpg", "/walnut.jpg", "/hazelnut.jpg", "/biscoff.jpg"]
+      careInstructions: cookieCare,
+      shippingInfo: standardShipping
     },
   ],
   tiramisu: [
