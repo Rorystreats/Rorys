@@ -88,14 +88,24 @@ export const menu: Record<string, MenuItem[]> = {
       shippingInfo: standardShipping,
       gallery: ["/dubai1.jpg.png", "/dubai2.jpg.png", "/dubai3.jpg.png", "/dubai4.jpg.png"]
     },
+    {
+      slug: "ultimate-cookie-box",
+      name: "Ultimate Box of 5",
+      price: 1290,
+      desc: "One box for all, has all our classic 5 flavours.",
+      careTitle: "Cookie survival guide",
+      careInstructions: cookieCare,
+      shippingInfo: standardShipping
+      gallery: ["/double.jpg", "/triple.jpg", "/walnut.jpg", "/hazelnut.jpg", "/biscoff.jpg"]
+    },
   ],
   tiramisu: [
     { slug: "classic-tiramisu", name: "Classic Affair", price: 499, desc: "Authentic ladyfingers dipped in rich Davidoff espresso with silky mascarpone dusted off with light cocoa powder is a melt in the mouth.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping, image: "/classict.jpg" },
     { slug: "biscoff-tiramisu", name: "After Hours", price: 599, desc: "Biscoff layered with espresso between the silky vanilla mascarpone is what you need.", careInstructions: "Keep refrigerated. Consume within 2 days.", shippingInfo: chilledShipping,image: "/biscofft.jpg" }
   ],
   tins: [
-    { slug: "classic-tiramisu-tin", name: "Classic Tiramisu Tin", price: 1399, desc: "Family-sized classic tiramisu.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/tiramisutin.jpg" },
-    { slug: "classic-cheesecake-tin", name: "Classic Cheesecake Tin", price: 1199, desc: "Rich, creamy cheesecake for sharing.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/cheesecaketin.jpg" }
+    { slug: "classic-tiramisu-tin", name: "Classic Tiramisu Tin", price: 1390, desc: "Family-sized classic tiramisu.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/tiramisutin.jpg" },
+    { slug: "classic-cheesecake-tin", name: "Classic Cheesecake Tin", price: 1390, desc: "Rich, creamy cheesecake for sharing.", careInstructions: "Keep refrigerated. Consume within 3 days.", shippingInfo: chilledShipping, image: "/cheesecaketin.jpg" }
   ],
   celebrations: [
       { 
