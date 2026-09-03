@@ -86,7 +86,7 @@ export const menu: Record<string, MenuItem[]> = {
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
       shippingInfo: standardShipping,
-      gallery: ["/dubai1.jpg", "/dubai2.jpg", "/dubai3.jpg", "/dubai4.jpg"]
+      gallery: ["/dubai1.jpg.png", "/dubai2.jpg.png", "/dubai3.jpg.png", "/dubai4.jpg.png"]
     },
   ],
   tiramisu: [
