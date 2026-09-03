@@ -95,7 +95,7 @@ export const menu: Record<string, MenuItem[]> = {
       desc: "One box for all, has all our classic 5 flavours.",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
-      shippingInfo: standardShipping
+      shippingInfo: standardShipping,
       gallery: ["/double.jpg", "/triple.jpg", "/walnut.jpg", "/hazelnut.jpg", "/biscoff.jpg"]
     },
   ],
