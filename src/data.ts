@@ -28,7 +28,7 @@ export const menu: Record<string, MenuItem[]> = {
     { 
       slug: "double-chocolate-chip", 
       name: "Grandma's Illegal Recipe", 
-      price: 370, 
+      price: 420, 
       desc: "Warm golden cookie loaded with rich dark chocolate callets, the one you'd like to keep hidden",
       image: "/double.jpg",
       careTitle: "Cookie survival guide",
@@ -39,7 +39,7 @@ export const menu: Record<string, MenuItem[]> = {
     { 
       slug: "the-midnight-cocoa-chunk", 
       name: "The Black Sheep", 
-      price: 370, 
+      price: 420, 
       desc: "Dark, milk, & white chocolate all together in one. This one's out of control.",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
@@ -49,7 +49,7 @@ export const menu: Record<string, MenuItem[]> = {
     { 
       slug: "walnut-chocolate-chip", 
       name: "Family Legacy", 
-      price: 370, 
+      price: 420, 
       desc: "Crunchy roasted walnuts with rich and powerful dark chocolate is the only kind of legacy you'd want",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
@@ -59,7 +59,7 @@ export const menu: Record<string, MenuItem[]> = {
     { 
       slug: "the-hazelnut-molten-core", 
       name: "The Godfather", 
-      price: 420, 
+      price: 470, 
       desc: "Nutty hazelnuts with soft and molten nutella center is what makes you who you are.",
       image: "/hazelnut.jpg",
       careTitle: "Cookie survival guide",
@@ -70,7 +70,7 @@ export const menu: Record<string, MenuItem[]> = {
     { 
       slug: "golden-macadamia-dream", 
       name: "Golden Boy Gone Rogue", 
-      price: 420, 
+      price: 470, 
       desc: "Everything that shines is Biscoff, cause it's the only shine that matters.", 
       image: "/biscoff.jpg",
       careTitle: "Cookie survival guide",
@@ -81,7 +81,7 @@ export const menu: Record<string, MenuItem[]> = {
     {
       slug: "trust-fund-behavior",
       name: "Trust Fund Behavior",
-      price: 420,
+      price: 470,
       desc: "Rich cocoa dough with toasted pistachios and a milk chocolate centre filled with Kunafa pistachio paste.",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
