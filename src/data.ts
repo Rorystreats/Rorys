@@ -81,11 +81,12 @@ export const menu: Record<string, MenuItem[]> = {
     {
       slug: "trust-fund-behavior",
       name: "Trust Fund Behavior",
-      price: 470,
+      price: 490,
       desc: "Rich cocoa dough with toasted pistachios and a milk chocolate centre filled with Kunafa pistachio paste.",
       careTitle: "Cookie survival guide",
       careInstructions: cookieCare,
-      shippingInfo: standardShipping
+      shippingInfo: standardShipping,
+      gallery: ["/dubai1.jpg", "/dubai2.jpg", "/dubai3.jpg", "/dubai4.jpg"]
     },
   ],
   tiramisu: [
