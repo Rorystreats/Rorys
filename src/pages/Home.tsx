@@ -32,7 +32,7 @@ export default function Home() {
       className="pt-20"
     >
       {/* Announcement Banner */}
-      <Link to="/menu/celebrations" className="bg-[#6B1111] text-[#FDFBF7] py-2.5 overflow-hidden flex whitespace-nowrap block hover:bg-[#5a0f0f] transition-colors cursor-pointer">
+      <Link to="/menu" className="bg-[#6B1111] text-[#FDFBF7] py-2.5 overflow-hidden flex whitespace-nowrap block hover:bg-[#5a0f0f] transition-colors cursor-pointer">
         <motion.div 
           animate={{ x: ["0%", "-50%"] }}
           transition={{ ease: "linear", duration: 80, repeat: Infinity }}
@@ -40,7 +40,7 @@ export default function Home() {
         >
           {[...Array(10)].map((_, i) => (
             <span key={i} className="text-sm font-medium tracking-wider uppercase flex items-center gap-8">
-              Rakshabandhan Pre-orders are now open till 18th Aug! Limited boxes available <span className="text-[#FDFBF7]/50 text-xl leading-none">&bull;</span>
+              Flavor of the Month: Trust Fund Behavior is here! <span className="text-[#FDFBF7]/50 text-xl leading-none">&bull;</span>
             </span>
           ))}
         </motion.div>
